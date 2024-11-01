@@ -128,7 +128,7 @@ sup {
   letter-spacing: 0.2px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
   article {
     display: grid;
     grid-template-columns: 311px;
