@@ -10,6 +10,26 @@
   font-family: KarlaThin;
   src: url(fonts/Karla/static/Karla-ExtraLight.ttf);
 }
+@media only screen and (max-width: 375px) {
+  article {
+    display: grid;
+    grid-template-columns: 311px;
+    grid-template-rows: 227px 227px 227px;
+    grid-template-areas:
+      "header"
+      "two"
+      "three";
+  }
+  .top {
+    grid-area: header;
+  }
+  .bottomleft {
+    grid-area: two;
+  }
+  .bottomright {
+    grid-area: three;
+  }
+}
 
 body,
 main {
