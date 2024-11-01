@@ -1,34 +1,14 @@
 @font-face {
   font-family: KarlaRegular;
-  src: url(fonts/Karla/static/Karla-Regular.ttf);
+  src: url(./fonts/Karla/static/Karla-Regular.ttf);
 }
 @font-face {
   font-family: KarlaBold;
-  src: url(fonts/Karla/static/Karla-Bold.ttf);
+  src: url(./fonts/Karla/static/Karla-Bold.ttf);
 }
 @font-face {
   font-family: KarlaThin;
-  src: url(fonts/Karla/static/Karla-ExtraLight.ttf);
-}
-@media only screen and (max-width: 375px) {
-  article {
-    display: grid;
-    grid-template-columns: 311px;
-    grid-template-rows: 227px 227px 227px;
-    grid-template-areas:
-      "header"
-      "two"
-      "three";
-  }
-  .top {
-    grid-area: header;
-  }
-  .bottomleft {
-    grid-area: two;
-  }
-  .bottomright {
-    grid-area: three;
-  }
+  src: url(./fonts/Karla/static/Karla-ExtraLight.ttf);
 }
 
 body,
@@ -60,7 +40,7 @@ button {
   font-family: KarlaRegular;
   font-size: 15px;
   border: none;
-  border-radius: 7px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +58,7 @@ button {
 #greentext {
   color: hsl(71, 73%, 54%);
   font-size: 17px;
-  font-family: KarlaBold;
+  font-family: KarlaThin;
   margin-top: 25px;
 }
 .top {
@@ -99,6 +79,7 @@ button {
 }
 #p-top {
   color: hsl(218, 22%, 67%);
+  font-family: KarlaRegular;
 }
 
 h1,
@@ -135,9 +116,88 @@ sup {
 #sub,
 #FAQ {
   font-size: 15px;
-  margin-top: 41px;
+  margin-top: 26px;
 }
+
 #PBR {
   font-family: KarlaThin;
   line-height: 19.5px;
+}
+#PBL {
+  font-family: KarlaThin;
+  letter-spacing: 0.2px;
+}
+
+@media only screen and (max-width: 375px) {
+  article {
+    display: grid;
+    grid-template-columns: 311px;
+    grid-template-rows: 267px 229px 229px;
+    grid-template-areas:
+      "header"
+      "two"
+      "three";
+  }
+  .top {
+    grid-area: header;
+  }
+  .bottomleft {
+    grid-area: two;
+    border-bottom-left-radius: 0px;
+  }
+  .bottomright {
+    grid-area: three;
+    border-bottom-left-radius: 10px;
+  }
+  h1,
+  h2,
+  button,
+  #p-top,
+  #greentext,
+  #sub,
+  #price,
+  #PBL,
+  #PBR {
+    margin-left: 24px;
+  }
+  h1 {
+    margin-top: 28px;
+    font-size: 20px;
+    letter-spacing: -0.6px;
+    word-spacing: 2.5px;
+  }
+  #greentext {
+    font-size: 16px;
+    letter-spacing: -0.45px;
+    word-spacing: 4.4px;
+  }
+  #p-top {
+    font-size: 14px;
+    line-height: 25.8px;
+    margin-right: 26px;
+    margin-top: 19px;
+  }
+  #sub {
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    word-spacing: -1.1px;
+  }
+  #FAQ {
+    font-size: 17px;
+    letter-spacing: 1.1px;
+    word-spacing: -0.5px;
+  }
+  #PBR {
+    margin-top: 18px;
+    line-height: 20px;
+    letter-spacing: -0.8px;
+    word-spacing: 1.2px;
+  }
+  button {
+    width: 263px;
+    margin-top: 27px;
+  }
+  sup {
+    word-spacing: 1.2px;
+  }
 }
